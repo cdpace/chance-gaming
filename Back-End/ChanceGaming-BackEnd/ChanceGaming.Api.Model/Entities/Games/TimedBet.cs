@@ -11,6 +11,8 @@ namespace ChanceGaming.Api.Model.Entities.Games
     {
         public Client Owner { get; set; }
         public bool IsOpen { get; set; } = true;
+
+        #region Computed Properties
         public decimal StartingAmount
         {
             get
@@ -42,6 +44,8 @@ namespace ChanceGaming.Api.Model.Entities.Games
                 return (TargetAmount / _numberOfBets);
             }
         }
+
+        #endregion
 
         private List<Bet> _placedBets { get; set; } = new List<Bet>();
         private decimal _startingAmount { get; set; } = 0;

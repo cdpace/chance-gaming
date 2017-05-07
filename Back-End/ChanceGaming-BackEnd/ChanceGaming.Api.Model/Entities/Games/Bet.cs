@@ -5,8 +5,13 @@ using System.Text;
 
 namespace ChanceGaming.Api.Model.Entities.Games
 {
-    public class Bet
+    public class Bet : BaseEntity<Guid>
     {
+        public Bet()
+        {
+            Id = Guid.NewGuid();
+        }
+
         public Client PlacedBy { get; set; }
         public decimal Amount { get; set; } = 0;
         public DateTime PlacmentDate { get; set; } = DateTime.UtcNow;
