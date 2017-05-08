@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="structuremap" Version="4.4.5" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ChanceGaming.Api.Model\ChanceGaming.Api.Model.csproj" />
   </ItemGroup>
 
